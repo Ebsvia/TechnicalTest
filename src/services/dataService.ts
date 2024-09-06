@@ -1,0 +1,1 @@
+// Fetches data from external JSON files

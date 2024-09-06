@@ -1,4 +1,6 @@
-import * as express from "express";
+//Defines Express app & routes
+
+import express from "express";
 
 export const app = express()
 
