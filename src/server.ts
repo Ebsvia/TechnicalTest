@@ -8,8 +8,6 @@ export const app = express();
 
 app.set("json spaces", 2);
 
-// Route placeholder for /cards
+// Route using controllers
 app.get("/cards", getAllCards);
-
-// Route placeholder for /cards/:cardId/:sizeId?
 app.get("/cards/:cardId/:sizeId?", getCardById);
