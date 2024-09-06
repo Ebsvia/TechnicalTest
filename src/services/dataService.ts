@@ -16,7 +16,7 @@ const fetchJson = async <T>(url: string, cacheKey: string): Promise<T> => {
       return cachedData;
     }
   
-    const response = await fetch(url);
+    const response = await fetch(url); // Using fetch() from node-fetch
     if (!response.ok) {
       throw new Error(`Error fetching data from ${url}`);
     }
@@ -29,3 +29,4 @@ const fetchJson = async <T>(url: string, cacheKey: string): Promise<T> => {
   export const fetchCards = (): Promise<Card[]> => fetchJson<Card[]>(CARDS_URL, 'cards');
   export const fetchSizes = (): Promise<Size[]> => fetchJson<Size[]>(SIZES_URL, 'sizes');
   export const fetchTemplates = (): Promise<Template[]> => fetchJson<Template[]>(TEMPLATES_URL, 'templates');
+  
